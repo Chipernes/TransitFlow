@@ -1,0 +1,150 @@
+:root {
+    /* Color */
+    --Primary-1: #FFBE34;
+    --Primary-2: #091242;
+    --Secondary-1: #F4F4F4;
+    --Headong-font: #1C1F35;
+    --Paragraph-font: #666C89;
+    --Gradient: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 50%, rgba(255,215,166,1) 100%);
+    --White: #FFFFFF;
+
+    /* Text */
+    --Display-text: 60px;
+    --Heading-1: 50px;
+    --Heading-2: 40px;
+    --Heading-3: 35px;
+    --Heading-4: 30px;
+    --Heading-5: 25px;
+    --Heading-6: 20px;
+    --Paragraph: 16px;
+
+    /* Font */
+    --Rubik: 'Rubik', sans-serif;
+    --Krub: 'Krub', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    transition: 0.3s;
+}
+
+a {
+    color: var(--White);
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    font-size: var(--Heading-6);
+    font-family: var(--Krub);
+}
+
+
+/* Header */
+header {
+    height: 160px;
+
+    background-color: var(--Primary-2);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 46px 0;
+}
+
+@media screen and (max-width: 1200px) {
+    nav {
+        padding: 46px 30px;
+    }
+}
+
+/* Navigation logo */
+.nav_logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav_logo h4 {
+    font-size: var(--Heading-4);
+    color: var(--White);
+}
+
+.nav_logo:hover img {
+    transform: scale(1.1);
+}
+
+.nav_logo:hover h4 {
+    color: var(--Primary-1);
+    cursor: pointer;
+}
+
+/* Navigation components */
+.nav_components {
+    display: flex;
+    gap: 25px;
+}
+
+/* Navigation inner */
+.nav_inner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-size: var(--Paragraph);
+    font-family: var(--Krub);
+    font-weight: 500;
+    color: var(--White);
+}
+
+.nav_inner p {
+    position: relative;
+    width: 180px;
+}
+
+.nav_inner:nth-of-type(3) p {
+    width: 130px;
+}
+
+.nav_inner:hover {
+    cursor: pointer;
+}
+
+.nav_inner:hover img {
+    transform: scale(1.1);
+}
+
+.nav_inner:hover a {
+    color: var(--Primary-1);
+    cursor: pointer;
+}
+
+.burger_menu {
+    display: none;
+    width: 64px;
+}
+
+@media screen and (max-width: 1100px) {
+    .nav_inner:nth-of-type(1) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav_inner {
+        display: none;
+    }
+
+    .burger_menu {
+        display: block;
+    }
+}
