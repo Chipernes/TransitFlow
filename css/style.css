@@ -3,10 +3,9 @@
     --Primary-1: #FFBE34;
     --Primary-2: #091242;
     --Secondary-1: #F4F4F4;
-    --Headong-font: #1C1F35;
+    --Heading-font: #1C1F35;
     --Paragraph-font: #666C89;
     --Gradient: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 50%, rgba(255,215,166,1) 100%);
-    --White: #FFFFFF;
 
     /* Text */
     --Display-text: 60px;
@@ -32,8 +31,12 @@
 }
 
 a {
-    color: var(--White);
+    color: var(--Secondary-1);
     text-decoration: none;
+}
+
+a, p {
+    font-size: var(--Paragraph);
 }
 
 .container {
@@ -46,25 +49,31 @@ a {
     font-family: var(--Krub);
 }
 
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+
 
 /* Header */
 header {
-    height: 160px;
-
-    background-color: var(--Primary-2);
+    height: 100vh;
+    background: url("../assets/images/header/header-img.jpg") fixed center;
 }
 
 /* Navigation */
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 46px 0;
+    width: 100%;
+    background-color: var(--Primary-2);
 }
 
-@media screen and (max-width: 1200px) {
-    nav {
-        padding: 46px 30px;
-    }
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
 }
 
 /* Navigation logo */
@@ -76,7 +85,7 @@ nav {
 
 .nav_logo h4 {
     font-size: var(--Heading-4);
-    color: var(--White);
+    color: var(--Secondary-1);
 }
 
 .nav_logo:hover img {
@@ -103,7 +112,7 @@ nav {
     font-size: var(--Paragraph);
     font-family: var(--Krub);
     font-weight: 500;
-    color: var(--White);
+    color: var(--Secondary-1);
 }
 
 .nav_inner p {
@@ -128,11 +137,6 @@ nav {
     cursor: pointer;
 }
 
-.burger_menu {
-    display: none;
-    width: 64px;
-}
-
 @media screen and (max-width: 1100px) {
     .nav_inner:nth-of-type(1) {
         display: none;
@@ -140,11 +144,155 @@ nav {
 }
 
 @media screen and (max-width: 800px) {
-    .nav_inner {
+    .nav_inner:nth-of-type(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav_inner:nth-of-type(3) {
+        display: none;
+    }
+
+    .nav_logo {
+        margin: 0 auto;
+    }
+}
+
+
+
+/* Menu */
+menu {
+    width: 100%;
+    height: 78px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+menu .container {
+    padding: 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu components */
+.menu_components {
+    display: flex;
+}
+
+.menu_component {
+    position: relative;
+    display: flex;
+
+    align-items: center;
+    height: 78px;
+}
+
+.menu_component p {
+    padding: 0 30px;
+    border-right: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.menu_component:first-child p {
+    padding-left: 0;
+}
+
+.menu_component:last-child p {
+    padding-right: 0;
+}
+
+.menu_component:nth-of-type(5) p {
+    border: none;
+}
+
+.menu_component::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+
+    width: calc(100% - 60px);
+    height: 2px;
+
+    background-color: var(--Secondary-1);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.menu_component:first-child::after {
+    width: calc(100% - 30px);
+    left: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .menu_component:first-child p {
+        padding-left: 30px;
+    }
+
+    .menu_component:first-child::after {
+        width: calc(100% - 60px);
+        left: 30px;
+    }
+}
+
+.menu_component:last-child::after {
+    width: calc(100% - 30px);
+    left: 30px;
+}
+
+.menu_component:hover::after {
+    opacity: 1;
+}
+
+.burger_menu {
+    display: none;
+    width: 55px;
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 950px) {
+    .menu_components {
         display: none;
     }
 
     .burger_menu {
         display: block;
     }
+}
+
+@media screen and (max-width: 550px) {
+    .menu_icons img {
+        display: none;
+    }
+}
+
+/* Menu icons */
+.menu_icons {
+    display: flex;
+    gap: 24px;
+    margin: 0 50px 0 auto;
+}
+
+/* Menu button */
+.menu_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 216px;
+    height: 78px;
+
+    background-color: var(--Secondary-1);
+}
+
+.menu_button p{
+    font-weight: 600;
+}
+
+.menu_button:hover {
+    cursor: pointer;
+    background-color: var(--Paragraph-font);
+    color: var(--Secondary-1);
 }
