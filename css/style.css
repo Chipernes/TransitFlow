@@ -112,6 +112,25 @@ h6 {
     height: 160px;
 }
 
+/* Section title */
+.section_suptitle {
+    display: inline-block;
+    padding: 0 10px;
+
+    font-family: var(--Rubik);
+    font-weight: 400;
+
+    background-color: rgba(102, 108, 137, 0.15);
+    border-left: 4px solid var(--Primary-1);
+}
+
+.section_title {
+    margin-top: 15px;
+
+    font-family: var(--Rubik);
+    font-weight: 600;
+}
+
 /* Container */
 .container {
     width: 100%;
@@ -232,6 +251,16 @@ nav {
 
     .nav_logo {
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    header {
+        height: calc(100vh - 90px);
+    }
+
+    .navigation {
+        height: 90px;
     }
 }
 
@@ -438,25 +467,17 @@ menu .container {
     }
 }
 
+@media screen and (max-height: 500px) {
+    .header_suptitle,
+    .header_subtitle {
+        display: none;
+    }
 
 
-/* Section title */
-.section_suptitle {
-    display: inline-block;
-    padding: 0 10px;
-
-    font-family: var(--Rubik);
-    font-weight: 400;
-
-    background-color: rgba(102, 108, 137, 0.15);
-    border-left: 4px solid var(--Primary-1);
-}
-
-.section_title {
-    margin-top: 15px;
-
-    font-family: var(--Rubik);
-    font-weight: 600;
+    .header_title h1{
+        width: 550px;
+        font-size: var(--Heading-3);
+    }
 }
 
 
