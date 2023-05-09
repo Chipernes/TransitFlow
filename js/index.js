@@ -4,6 +4,8 @@ const header = document.querySelector('header');
 
 // Зберігаємо початкову позицію навігаційної панелі
 const navTop = nav.offsetTop;
+
+const navHeight = nav.offsetHeight;
 const headerHeight = header.offsetHeight;
 
 // Додаємо обробник події прокрутки сторінки
@@ -20,7 +22,7 @@ window.addEventListener('scroll', () => {
         nav.classList.remove('fixed_menu');
     }
 
-    if (scrollPos > headerHeight) {
+    if (scrollPos > headerHeight + navHeight) {
         nav.classList.add('nontransparent_menu');
     } else {
         // В іншому випадку видаляємо стиль
