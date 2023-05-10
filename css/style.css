@@ -153,7 +153,7 @@ h6 {
 /* Header */
 header {
     height: calc(100vh - 160px);
-    background: url("../assets/images/header/header-img-temp.jpg") fixed center;
+    background: url("../assets/images/header/header-background.jpg") fixed center;
     background-size: cover;
 }
 
@@ -392,6 +392,15 @@ menu .container {
     margin: 0 50px 0 auto;
 }
 
+.menu_icons a {
+    display: flex;
+    transition: 0.3s;
+}
+
+.menu_icons a:hover {
+    transform: scale(1.1);
+}
+
 /* Menu button */
 .menu_button {
     display: flex;
@@ -551,4 +560,129 @@ menu .container {
 }
 
 
+
+/* Why Us */
+/* Image */
+.why_us_img {
+    width: 100%;
+    height: 500px;
+}
+
+.why_us_img img {
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Content */
+.why_us {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-top: -150px;
+    padding: 85px;
+
+    background-color: #ffffff;
+}
+
+.why_us_title {
+    width: 500px;
+}
+
+.why_us_title .section_subtitle {
+    width: 450px;
+    margin-top: 12px;
+}
+
+/* Why us benefits */
+.why_us_benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+
+    margin-top: 25px;
+}
+
+.benefit_item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Why us delivery */
+.delivery_plane {
+    position: relative;
+}
+
+.delivery_plane img {
+    width: 100%;
+}
+
+.delivery_list {
+    position: absolute;
+    top: 60%;
+    left: -35%;
+}
+
+.delivery_list img {
+    width: 372px;
+    height: 248px;
+
+    border: 30px solid #ffffff;
+}
+
+@media screen and (max-width: 1200px) {
+    .why_us {
+        justify-content: center;
+    }
+
+    .why_us_title {
+        text-align: center;
+    }
+
+    .why_us_benefits {
+        margin: 25px auto;
+    }
+
+    .delivery_list {
+        left: calc(100% - 417px);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .why_us {
+        padding: 65px;
+    }
+
+    .delivery_list {
+        position: static;
+        margin-top: -35%;
+    }
+
+    .delivery_list img {
+        width: 90%;
+        height: 100%;
+        margin: 0 5%;
+
+        border: 15px solid #ffffff;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .why_us {
+        padding: 25px;
+    }
+
+    .why_us_title {
+        width: 100%;
+    }
+
+    .why_us_title .section_subtitle {
+        width: 100%
+    }
+}
 
