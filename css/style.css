@@ -94,7 +94,7 @@ h6 {
 
 }
 
-.button p{
+.button p {
     position: absolute;
     z-index: 1;
     font-weight: 600;
@@ -440,15 +440,15 @@ menu .container {
     color: var(--Secondary-1);
 }
 
-.header_suptitle {
-    width: 280px;
+.header_inner .section_suptitle {
+    width: 285px;
     padding-left: 10px;
 
     background-color: rgba(0, 0, 0, 0.25);
     border-left: 4px solid var(--Primary-1);
 }
 
-.header_title {
+.header_inner .section_title {
     margin: 10px 0;
     font-family: var(--Rubik);
     font-weight: 700;
@@ -467,7 +467,7 @@ menu .container {
         font-size: var(--Heading-2);
     }
 
-    .header_subtitle {
+    .header_inner .section_subtitle {
         display: none;
     }
 
@@ -477,13 +477,13 @@ menu .container {
 }
 
 @media screen and (max-height: 500px) {
-    .header_suptitle,
-    .header_subtitle {
+    .header_inner .section_suptitle,
+    .header_inner .section_subtitle {
         display: none;
     }
 
 
-    .header_title h1{
+    .header_inner .section_title h1{
         width: 550px;
         font-size: var(--Heading-3);
     }
@@ -652,7 +652,7 @@ menu .container {
     gap: 50px;
 
     width: 100%;
-    padding: 46px 0 40px 0;
+    padding-top: 46px;
 
     border: 2px solid rgba(0, 0, 0, 0.25);
 }
@@ -678,6 +678,35 @@ menu .container {
     width: 15px;
     height: 15px;
     background: var(--Gradient);
+}
+
+/* Delivery ways */
+.transport-ways {
+    width: 100%;
+    max-width: 90%;
+
+    margin: 0 auto;
+}
+
+.transport-ways h3 {
+    margin: -20px auto 25px auto;
+
+    text-align: center;
+    font-family: var(--Rubik);
+}
+
+.transport_type {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.transport_img {
+    width: 18%;
+}
+
+.transport_img img {
+    width: 100%;
 }
 
 
