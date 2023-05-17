@@ -804,7 +804,7 @@ menu .container {
 /* Pages */
 
 /* About Us */
-.header__about_us {
+.header_about_us {
     height: calc(75vh - 160px);
     background: url("../assets/images/about-us/header/header-background.png") fixed 0 75% no-repeat;
     background-size: cover;
@@ -946,7 +946,7 @@ menu .container {
     flex-wrap: wrap;
     gap: 50px;
 
-    padding-top: 55px;
+    padding-top: 100px;
 }
 
 .about_work_component {
@@ -960,3 +960,92 @@ menu .container {
 .about_button {
     margin: 50px auto 0 auto;
 }
+
+
+
+/* Team */
+.team {
+    padding: 100px 0;
+}
+
+.team_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team_title .section_suptitle {
+    width: 155px;
+
+    margin: 0 auto;
+}
+
+/* Team photos */
+.team_photos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    margin-top: 40px;
+}
+
+.team_component {
+    position: relative;
+}
+
+.team_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 110px;
+
+    margin-top: -6px;
+    padding: 25px 0 0 35px;
+
+    color: #ffffff;
+    background-color: var(--Primary-2);
+}
+
+/* Team socials */
+.team_social {
+    position: absolute;
+    top: 74%;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    width: 150px;
+    height: 60px;
+
+    background: var(--Gradient);
+}
+
+.team_social img {
+    display: flex;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.team_component:nth-of-type(2) .team_social {
+    width: 200px;
+}
+
+.team_component:nth-of-type(3) .team_social {
+    width: 100px;
+}
+
+.team_social a:hover img {
+    transform: scale(1.1);
+}
+
+
