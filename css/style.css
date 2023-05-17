@@ -7,6 +7,7 @@
     --Paragraph-font: #666C89;
     --Gradient: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 50%, rgba(255,215,166,1) 100%);
 
+
     /* Text */
     --Display-text: 60px;
     --Heading-1: 50px;
@@ -26,8 +27,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
-    transition: 0.3s;
 }
 
 a {
@@ -105,7 +104,7 @@ h6 {
 }
 
 .button:hover::after {
-    top: -50%;
+    top: -55%;
     right: -15%;
 
     width: 160px;
@@ -153,7 +152,7 @@ h6 {
 /* Header */
 header {
     height: calc(100vh - 160px);
-    background: url("../assets/images/header/header-background.jpg") fixed center;
+    background: url("../assets/images/home/header/header-background.jpg") fixed center;
     background-size: cover;
 }
 
@@ -411,6 +410,8 @@ menu .container {
     height: 78px;
 
     background-color: var(--Secondary-1);
+
+    transition: 0.3s;
 }
 
 .menu_button p{
@@ -419,8 +420,7 @@ menu .container {
 
 .menu_button:hover {
     cursor: pointer;
-    background-color: var(--Paragraph-font);
-    color: var(--Secondary-1);
+    background-color: var(--Primary-1);
 }
 
 
@@ -441,7 +441,6 @@ menu .container {
 }
 
 .header_inner .section_suptitle {
-    width: 285px;
     padding-left: 10px;
 
     background-color: rgba(0, 0, 0, 0.25);
@@ -780,5 +779,99 @@ menu .container {
     .statistic_component h1 {
         font-size: var(--Heading-2);
     }
+}
+
+
+
+
+
+
+
+
+
+/* Pages */
+
+/* About Us */
+.header__about_us {
+    height: calc(75vh - 160px);
+    background: url("../assets/images/about-us/header/header-background.png") fixed 0 75% no-repeat;
+    background-size: cover;
+}
+
+.about_us {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+
+    margin: 100px 0;
+}
+
+.about_img {
+    position: relative;
+
+    margin-left: -20%;
+}
+
+.courier_img {
+    position: absolute;
+    bottom: -15%;
+    right: -10%;
+
+    border: 25px solid #ffffff;
+}
+
+/* About Us Buttons */
+.approach_button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+
+    margin: 20px 0 25px 0;
+}
+
+.approach_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 60px;
+
+    font-weight: 600;
+    color: #000000;
+
+    background: var(--Secondary-1);
+
+    transition: 0.3s;
+}
+
+/* Approach */
+.approach_button:nth-of-type(2):hover,
+.approach_button:nth-of-type(3):hover{
+    color: #ffffff;
+    background: var(--Paragraph-font) ;
+}
+
+.approach_button-active {
+    color: #ffffff;
+    background: var(--Primary-1);
+}
+
+.approach_button-active:hover {
+    color: #ffffff;
+    background: #eca302;
+}
+
+/* About Us Button */
+.about_button .button {
+    margin-top: 35px;
+
+    color: #ffffff;
+
+    background: var(--Primary-2);
+}
+
+.about_button .button::after {
+    background-color: var(--Paragraph-font);
 }
 
