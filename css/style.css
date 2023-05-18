@@ -1122,3 +1122,78 @@ menu .container {
         display: none;
     }
 }
+
+
+
+/* Out Pricing */
+.our_pricing {
+    padding: 100px 0;
+}
+
+.pricing_title {
+    text-align: center;
+}
+
+/* Pricing information */
+.pricing_information {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    margin-top: 65px;
+}
+
+.pricing_component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 380px;
+    height: 650px;
+
+    font-family: var(--Rubik);
+    font-weight: 500;
+    text-align: center;
+
+    background-color: var(--Secondary-1);
+}
+
+.pricing_component > p {
+    margin: 40px 0 50px 0;
+}
+
+.pricing_component span {
+    font-size: 85px;
+}
+
+.pricing_component .pricing_benefits p {
+    padding: 15px 30px;
+    font-size: var(--Heading-6);
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.pricing_component p:nth-of-type(4) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.pricing_benefits {
+    display: flex;
+    flex-direction: column;
+
+    margin: 50px 0;
+}
+
+.pricing_button p {
+    font-family: var(--Krub);
+}
+
+.pricing_component:nth-of-type(2) {
+    color: #ffffff;
+    background-color: var(--Primary-2);
+}
+
+.pricing_component:nth-of-type(2) .button-1 {
+    color: #000000;
+}
